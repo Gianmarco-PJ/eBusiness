@@ -1,0 +1,48 @@
+<div class="content-container fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <i class="fas fa-home"></i>
+        Zapatería X
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          {{#if user}}
+          <li class="nav-item">
+            <a class="nav-link" href="/profile">{{user.name}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/products/list">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/products/cart">
+              <i class="fas fa-shopping-cart"></i> Cart
+              <span class="badge badge-light">{{cartItemCount}}</span>
+            </a>
+          <li class="nav-item">
+            <a class="nav-link" href="/products">Contact</a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
+          {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="/signin">SignIn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/signup">SignUp</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#ContactUs">Contact</a>
+          </li>
+          {{/if}}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

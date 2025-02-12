@@ -1,0 +1,38 @@
+<body class="view-listClient">
+  <div class="container p-4">
+    <div class="row">
+      {{#each products}}
+      <div class="col-md-4 mb-4">
+        <div class="card card-list text-center shadow-sm">
+          <div class="card-body">
+            <img src="{{url_imagen}}" alt="{{name}}" class="img-fluid mb-3" style="max-height: 200px;">
+            <h3 class="card-title text-uppercase">
+              {{name}}
+            </h3>
+            <p class="card-text">{{description}}</p>
+            <p class="text-muted">Price: ${{price}}</p>
+            <p class="text-muted">Stock: {{stock}}</p>
+            {{#if stock}}
+            <form action="/products/cart/add" method="POST">
+              <input type="hidden" name="productId" value="{{id}}">
+              <input type="number" name="amount" min="1" max="{{stock}}" value="1" class="form-control mb-2">
+              <button type="submit" class="btn btn-success">
+                Agregar al carrito
+              </button>
+            </form>
+            {{else}}
+            <p class="text-danger">No hay suficiente stock</p>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+      {{else}}
+      <div class="col-md-4 mx-auto">
+        <div class="card card-body text-center">
+          <p>No existen productos disponibles.</p>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</body>

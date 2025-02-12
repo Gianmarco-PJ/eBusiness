@@ -1,0 +1,24 @@
+<body class="signup-view">
+  <div class="wrapper">
+    <form action="/signup" method="POST">
+      <h2 class="h2-auth">Registrarse</h2>
+      <div class="input-field">
+        <input type="text" name="name" required>
+        <label>Ingresa tu nombre</label>
+      </div>
+      <div class="input-field">
+        <input type="text" name="email" required>
+        <label>Ingresa tu email</label>
+      </div>
+      <div class="input-field">
+        <input type="password" name="password" required>
+        <label>Ingresa tu contraseña</label>
+      </div>
+      <br>
+      <button type="submit" class="button-auth">Registrar</button>
+      <div class="register">
+        <p>¿Ya posees una cuenta? <a href="/signin">Iniciar sesión</a></p>
+      </div>
+    </form>
+  </div>
+</body>

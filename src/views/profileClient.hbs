@@ -1,0 +1,27 @@
+<body class="profile-view">
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-md-4 mx-auto">
+        <div class="card-profile card text-center">
+          <div class="card-profile card-body">
+            <h1>Bienvenido</h1>
+            <div class="img-container">
+              <img src="/img/icon.png" alt="Profile Icon">
+            </div>
+            <h2>{{user.name}}</h2>
+            <h4>Email: {{user.email}}</h4>
+            <form action="/products/list">
+              <button class="button-profile btn">Productos</button>
+            </form>
+            <form action="/products/cart">
+              <button class="button-profile btn">Carrito</button>
+            </form>
+            <form action="/logout">
+              <button class="button-profile btn">Logout</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

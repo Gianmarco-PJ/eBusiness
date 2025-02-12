@@ -1,0 +1,20 @@
+<body class="login-view">
+  <div class="wrapper">
+    <form action="/signin" method="POST">
+      <h2 class="h2-auth">Iniciar Sesión</h2>
+      <div class="input-field">
+        <input type="text" name="email" required>
+        <label>Ingrese su email</label>
+      </div>
+      <div class="input-field">
+        <input type="password" name="password" required>
+        <label>Ingrese su contraseña</label>
+      </div>
+      <br>
+      <button type="submit" class="button-auth">Ingresar</button>
+        <div class="register">
+          <p>¿Aún no tienes una cuenta? <a href="/signup">Registrarse</a></p>
+        </div>
+    </form>
+  </div>
+</body>
